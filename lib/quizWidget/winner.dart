@@ -27,7 +27,7 @@ class _WinnerPageState extends State<WinnerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Center(
@@ -35,29 +35,27 @@ class _WinnerPageState extends State<WinnerPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'your score is',
                 style: TextStyle(fontSize: 45),
               ),
               Text(
                 '$score',
-                style: TextStyle(fontSize: 250),
+                style: const TextStyle(fontSize: 250),
               ),
-              Container(
-                child: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        qCount = 0;
-                        score = 0;
-                        Phoenix.rebirth(context);
-                      });
-                    },
-                    icon: Icon(
-                      Icons.replay_outlined,
-                      color: Colors.orange,
-                      size: 50,
-                    )),
-              )
+              IconButton(
+                  onPressed: () {
+                    setState(() {
+                      qCount = 0;
+                      score = 0;
+                      Phoenix.rebirth(context);
+                    });
+                  },
+                  icon: const Icon(
+                    Icons.replay_outlined,
+                    color: Colors.orange,
+                    size: 50,
+                  )),
             ],
           ),
         ),

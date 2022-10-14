@@ -94,7 +94,7 @@ class _MyAppState extends State<MyApp> {
         //   pushPagef: pushPage,
         // ),
         home: question == ''
-            ? LoadingPage()
+            ? const LoadingPage()
             : qCount >= 11
                 ? WinnerPage(
                     pushPagef: pushPage,
@@ -205,12 +205,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Spacer(),
-                  Container(
-                    child: Text(
-                      widget.question,
-                      style: const TextStyle(fontSize: 32),
-                      textAlign: TextAlign.center,
-                    ),
+                  Text(
+                    widget.question,
+                    style: const TextStyle(fontSize: 32),
+                    textAlign: TextAlign.center,
                   ),
                   const Spacer(),
                   //
@@ -229,7 +227,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           click[x] = Colors.green;
                         });
                         setState(() async {
-                          await Future.delayed(Duration(seconds: 1));
+                          await Future.delayed(const Duration(seconds: 1));
                           resetCI();
                           widget.pushPage();
                         });
@@ -266,7 +264,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           click[x] = Colors.green;
                         });
                         setState(() async {
-                          await Future.delayed(Duration(seconds: 1));
+                          await Future.delayed(const Duration(seconds: 1));
                           resetCI();
                           widget.pushPage();
                         });
@@ -303,7 +301,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           click[x] = Colors.green;
                         });
                         setState(() async {
-                          await Future.delayed(Duration(seconds: 1));
+                          await Future.delayed(const Duration(seconds: 1));
                           resetCI();
                           widget.pushPage();
                         });
@@ -340,7 +338,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           click[x] = Colors.green;
                         });
                         setState(() async {
-                          await Future.delayed(Duration(seconds: 1));
+                          await Future.delayed(const Duration(seconds: 1));
                           resetCI();
                           widget.pushPage();
                         });
